@@ -425,7 +425,7 @@ main .slideWrapper .slideNo4 {
   background-image: url("../img/mainSliderBg4.png");
 }
 
-main .slideWrapper h1 {
+main .slideWrapper h2 {
   font-size: 60px;
   text-transform: uppercase;
   color: #ffffff;
@@ -433,13 +433,13 @@ main .slideWrapper h1 {
 }
 
 @media (max-width: 599px) {
-  main .slideWrapper h1 {
+  main .slideWrapper h2 {
     font-size: 45px;
   }
 }
 
 @media (min-width: 600px) and (max-width: 1199px) {
-  main .slideWrapper h1 {
+  main .slideWrapper h2 {
     font-size: 53px;
   }
 }
@@ -578,7 +578,7 @@ main .bottomPageButton {
   }
 }
 
-.link .linkAbout h1, .link .linkRecruit h1, .link .linkBrochure h1, .link .linkService h1 {
+.link .linkAbout h2, .link .linkRecruit h2, .link .linkBrochure h2, .link .linkService h2 {
   font-family: MyriadProBold;
   font-size: 1.8em;
   color: #3d3d3d;
@@ -586,13 +586,13 @@ main .bottomPageButton {
 }
 
 @media (max-width: 599px) {
-  .link .linkAbout h1, .link .linkRecruit h1, .link .linkBrochure h1, .link .linkService h1 {
+  .link .linkAbout h2, .link .linkRecruit h2, .link .linkBrochure h2, .link .linkService h2 {
     font-size: 1.5em;
   }
 }
 
 @media (min-width: 600px) and (max-width: 1199px) {
-  .link .linkAbout h1, .link .linkRecruit h1, .link .linkBrochure h1, .link .linkService h1 {
+  .link .linkAbout h2, .link .linkRecruit h2, .link .linkBrochure h2, .link .linkService h2 {
     font-size: 1.2em;
   }
 }
@@ -628,7 +628,7 @@ main .bottomPageButton {
   background-image: url("../img/linkAboutBg.png");
 }
 
-.link .linkAbout h1 {
+.link .linkAbout h2 {
   padding-top: 3.5em;
 }
 
@@ -644,7 +644,7 @@ main .bottomPageButton {
   background-image: url("../img/linkBrochureBg.png");
 }
 
-.link .linkBrochure h1 {
+.link .linkBrochure h2 {
   padding-top: 3.5em;
 }
 
@@ -661,7 +661,7 @@ main .bottomPageButton {
           box-shadow: inset 0 0 0 1000px rgba(122, 208, 216, 0.7);
 }
 
-.link a:hover h1, .link a:hover h3 {
+.link a:hover h2, .link a:hover h3 {
   color: #ffffff;
 }
 
@@ -706,7 +706,7 @@ main .bottomPageButton {
   }
 }
 
-.works .worksTitle h1 {
+.works .worksTitle h2 {
   font-family: MyriadProBold;
   font-size: 2em;
   text-transform: uppercase;
@@ -715,7 +715,7 @@ main .bottomPageButton {
 }
 
 @media (max-width: 599px) {
-  .works .worksTitle h1 {
+  .works .worksTitle h2 {
     font-size: 1.8em;
   }
 }
@@ -922,7 +922,7 @@ main .bottomPageButton {
   position: relative;
 }
 
-.contact h1 {
+.contact h2 {
   font-family: MyriadProBold;
   font-size: 2em;
   text-transform: uppercase;
@@ -930,13 +930,13 @@ main .bottomPageButton {
 }
 
 @media (max-width: 599px) {
-  .contact h1 {
+  .contact h2 {
     font-size: 1.8em;
   }
 }
 
 @media (min-width: 600px) and (max-width: 1199px) {
-  .contact h1 {
+  .contact h2 {
     font-size: 1.9em;
   }
 }
@@ -987,7 +987,7 @@ main .bottomPageButton {
   }
 }
 
-.contact h2 {
+.contact h4 {
   font-family: 'Nanum Gothic';
   font-size: 1.5em;
   padding: .3em 0;
@@ -995,13 +995,13 @@ main .bottomPageButton {
 }
 
 @media (max-width: 599px) {
-  .contact h2 {
+  .contact h4 {
     font-size: 1.3em;
   }
 }
 
 @media (min-width: 600px) and (max-width: 1199px) {
-  .contact h2 {
+  .contact h4 {
     font-size: 1.4em;
   }
 }
