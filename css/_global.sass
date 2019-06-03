@@ -1,0 +1,87 @@
+@font-face
+    font-family: 'KhmerUI'
+    font-style: normal
+    font-weight: normal
+    src: url('../fonts/KhmerUI.ttf')
+@font-face
+    font-family: 'MyriadPro'
+    font-style: normal
+    font-weight: normal
+    src: url('../fonts/Myriad Pro Regular.ttf')
+@font-face
+    font-family: 'MyriadProBold'
+    font-style: normal
+    font-weight: normal
+    src: url('../fonts/Myriad Pro-Bold.otf')
+@font-face
+    font-family: 'MyriadProLight'
+    font-style: normal
+    font-weight: normal
+    src: url('../fonts/Myriad Pro-Light.otf')
+@font-face
+    font-family: 'Segoe UI Regular'
+    font-style: normal
+    font-weight: normal
+    src: url('../fonts/Segoe UI.woff')
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap')
+/* end fonts import */
+@import res
+%container
+    width: 1200px
+    margin: 0 auto
+    +forPhoneOnly
+        width: 100% //change at phone size
+    +forTabletPortraitUp
+    +forTabletLandscapeUp
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+body
+    font-family: MyriadPro, sans-serif
+    background-color: #ffffff
+    scroll-behavior: smooth
+header
+    background-color: #ffffff
+    height: 60px
+    width: 100%
+    +forPhoneOnly
+        background-color: rgba(0, 0, 0, 0) //change at phone size
+        height: 80px
+        padding: 0 2em
+        position: fixed
+        top: 0
+    +forTabletPortraitUp
+    +forTabletLandscapeUp
+    .menu
+        @extend %container
+main
+    background-color: #000000
+    @extend %container
+    height: calc(1200px * 0.5)
+.link
+    background-color: #ffffff
+    @extend %container
+    height: calc(1200px * 0.24)
+    +forPhoneOnly
+        height: calc(100vw * 0.96)
+    +forTabletPortraitUp
+    +forTabletLandscapeUp
+.works
+    background-color: #ffffff
+    @extend %container
+    height: calc(1200px * 0.47)
+    +forPhoneOnly
+        height: calc(100vw * 1.8)
+    +forTabletPortraitUp
+    +forTabletLandscapeUp
+.contact
+    background-color: #ffffff
+    @extend %container
+    height: calc(1200px * 0.35)
+footer
+    background-color: #ffffff
+    width: 100%
+    height: calc(1200px * 0.15)
+    border-top: 1px solid #eeeeee
+/* end body structure */

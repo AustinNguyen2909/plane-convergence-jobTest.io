@@ -1,0 +1,480 @@
+@import global
+%middleAlignment
+    display: flex
+    align-items: center
+    justify-content: center
+/* style header */
+header
+    @extend %middleAlignment
+    .menu
+        display: flex
+        justify-content: space-between
+        .logoAtBigScreen
+            display: flex
+            align-items: center
+            +forPhoneOnly
+                display: none
+            +forTabletPortraitUp
+            +forTabletLandscapeUp
+            img
+                height: 90%
+                width: auto
+        .logoAtSmallScreen
+            display: none
+            z-index: 1
+            +forPhoneOnly
+                display: flex
+                align-items: center
+            +forTabletPortraitUp
+            +forTabletLandscapeUp
+            img
+                height: 90%
+                width: auto
+        ul
+            @extend %middleAlignment
+            list-style-type: none
+            +forPhoneOnly
+                display: none
+            +forTabletPortraitUp
+            +forTabletLandscapeUp
+            li
+                @extend %middleAlignment
+                width: 8em
+                a
+                    text-decoration: none
+                    font-weight: bold
+                    color: #444444
+                    text-transform: uppercase
+                a:hover
+                    color: #43bbbc
+        .sideNavIcon
+            font-size: 2em
+            color: #ffffff
+            cursor: pointer
+            +forPC
+                display: none !important
+            +forPhoneOnly
+                display: flex
+                align-items: center
+            +forTabletPortraitUp
+            +forTabletLandscapeUp
+        .sidenav
+            height: 100%
+            width: 0
+            position: fixed
+            z-index: 1
+            top: 0
+            right: 0
+            background-color: rgba(0, 0, 0, .8)
+            overflow-x: hidden
+            transition: 0.5s
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+        .sidenav .smallScreenMenuItem
+            padding: 0 1.5rem
+            text-decoration: none
+            text-transform: uppercase
+            font-size: 1.5em
+            line-height: 3em
+            color: #ffffff
+            display: block
+            transition: 0.3s
+        .sidenav .smallScreenMenuItem:after
+            border-bottom: 2px solid #ffffff
+            content: ''
+            display: block
+            margin-left: 75%
+            width: 25%
+        .sidenav .smallScreenMenuItem:hover
+            color: #43bbbc
+            cursor: pointer
+        .sidenav .smallScreenMenuItem:hover:after
+            border-bottom: 2px solid #43bbbc
+            content: ''
+            display: block
+            margin-left: 75%
+            width: 25%
+        .sidenav .closebtn
+            padding: 0 1em
+            text-decoration: none
+            font-size: 1.5em
+            color: #ffffff
+            display: block
+            line-height: 80px
+            font-size: 36px
+            margin-left: 50px
+        .sidenav .menuLinkToFb
+            font-size: 1.2em
+        .sidenav .menuLinkToFb:after
+            border: none
+        .sidenav .menuLinkToFb:hover:after
+            border: none
+/* end style header */
+/* style main */
+%slideItem
+    width: 25%
+    height: inherit
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    flex-direction: column
+main
+    overflow: hidden
+    .slideWrapper
+        width: 400%
+        height: inherit
+        animation: slide 20s ease infinite
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        .slideNo1
+            @extend %middleAlignment
+            background-image: url('../img/mainSliderBg1.png')
+            @extend %slideItem
+        .slideNo2
+            @extend %middleAlignment
+            background-image: url('../img/mainSliderBg2.png')
+            @extend %slideItem
+        .slideNo3
+            @extend %middleAlignment
+            background-image: url('../img/mainSliderBg3.png')
+            @extend %slideItem
+        .slideNo4
+            @extend %middleAlignment
+            background-image: url('../img/mainSliderBg4.png')
+            @extend %slideItem
+        h1
+            font-size: 60px
+            text-transform: uppercase
+            color: #ffffff
+            text-align: center
+            +forPhoneOnly
+                font-size: 45px
+            +forTabletPortraitUp
+            +forTabletLandscapeUp
+        .fontMyriadProBold
+            font-family: MyriadProBold
+        .fontMyriadProLight
+            font-family: MyriadProLight
+            font-weight: lighter
+        p
+            font-family: 'Nanum Gothic'
+            color: #ffffff
+            text-align: center
+            padding-top: 1em
+            +forPhoneOnly
+                font-size: .8em
+            +forTabletPortraitUp
+            +forTabletLandscapeUp
+@keyframes slide
+    20%
+        margin-left: 0
+    30%
+        margin-left: -100%
+    45%
+        margin-left: -100%
+    55%
+        margin-left: -200%
+    70%
+        margin-left: -200%
+    80%
+        margin-left: -300%
+    95%
+        margin-left: -300%
+/* end style main */
+/* style link */
+%linkItem
+    width: 25%
+    height: calc(300px * 0.96)
+    background-size: cover
+    background-repeat: no-repeat
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    +forPhoneOnly
+        width: 50%
+        height: 50%
+    +forTabletPortraitUp
+    +forTabletLandscapeUp
+%linkItemHeading
+    font-family: MyriadProBold
+    font-size: 1.8em
+    +forPhoneOnly
+        font-size: 1.5em
+    +forTabletPortraitUp
+    +forTabletLandscapeUp
+    color: #3d3d3d
+    text-transform: uppercase
+%linkItemSubHeading
+    font-family: 'Segoe UI Regular'
+    font-size: .8em
+    +forPhoneOnly
+        font-size: .7em
+    +forTabletPortraitUp
+    +forTabletLandscapeUp
+    color: #3d3d3d
+    text-transform: uppercase
+.link
+    display: flex
+    flex-wrap: wrap
+    .linkAbout
+        @extend %linkItem
+        background-image: url('../img/linkAboutBg.png')
+        h1
+            @extend %linkItemHeading
+            padding-top: 3.5em
+    .linkRecruit
+        @extend %linkItem
+        background-image: url('../img/linkRecruitBg.png')
+        h1
+            @extend %linkItemHeading
+        h3
+            @extend %linkItemSubHeading
+            font-weight: lighter
+    .linkBrochure
+        @extend %linkItem
+        background-image: url('../img/linkBrochureBg.png')
+        h1
+            @extend %linkItemHeading
+            padding-top: 3.5em
+    .linkService
+        @extend %linkItem
+        background-image: url('../img/linkServiceBg.png')
+        h1
+            @extend %linkItemHeading
+        h3
+            @extend %linkItemSubHeading
+            font-weight: lighter
+    a:hover
+        box-shadow: inset 0 0 0 1000px rgba(122, 208, 216, .7)
+        h1, h3
+            color: #ffffff
+/* end style link */
+/* style works */
+.works
+    display: flex
+    flex-direction: column
+    .worksTitle
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 30%
+        +forPhoneOnly
+            height: 20%
+        +forTabletPortraitUp
+        +forTabletLandscapeUp
+        h1
+            font-family: MyriadProBold
+            font-size: 2em
+            +forPhoneOnly
+                font-size: 1.8em
+            +forTabletPortraitUp
+            +forTabletLandscapeUp
+            text-transform: uppercase
+            color: #4d4d4f
+            padding-bottom: .3em
+        .worksDivideLine
+            height: 1px
+            width: 20px
+            border: 1px solid #4d4d4f
+        h3
+            font-family: 'Nanum Gothic'
+            font-size: 1em
+            +forPhoneOnly
+                font-size: .8em
+            +forTabletPortraitUp
+            +forTabletLandscapeUp
+            text-transform: uppercase
+            color: #4d4d4f
+            padding-top: 1em
+    .worksList
+        height: 70%
+        display: flex
+        flex-wrap: wrap
+        flex-direction: row
+        +forPhoneOnly
+            height: 80%
+        +forTabletPortraitUp
+        +forTabletLandscapeUp
+        .worksItem
+            @extend %middleAlignment
+            width: 1 / 6 * 100%
+            height: 50%
+            +forPhoneOnly
+                width: 50%
+                height: 1 / 3 * 100%
+            +forTabletPortraitUp
+            +forTabletLandscapeUp
+            a
+                @extend %middleAlignment
+                height: 80%
+                width: 80%
+                text-decoration: none
+                transform: scale(0)
+                transition: all .5s
+            .worksItemDescription
+                @extend %middleAlignment
+                height: 100%
+                width: 100%
+                background-color: #ffffff
+                text-align: center
+                p
+                    font-family: 'Nanum Gothic'
+                    font-size: .7em
+                    color: #43bbbc
+                    font-weight: bold
+        .worksItem:hover>a
+            transform: scale(1)
+        .disappearAtSmallScreen
+            +forPhoneOnly
+                display: none
+            +forTabletPortraitUp
+            +forTabletLandscapeUp
+#worksItemNo1
+    background-image: url('../img/worksItemNo1.png')
+    background-size: cover
+    background-repeat: no-repeat
+#worksItemNo2
+    background-image: url('../img/worksItemNo2.png')
+    background-size: cover
+    background-repeat: no-repeat
+#worksItemNo3
+    background-image: url('../img/worksItemNo3.png')
+    background-size: cover
+    background-repeat: no-repeat
+#worksItemNo4
+    background-image: url('../img/worksItemNo4.png')
+    background-size: cover
+    background-repeat: no-repeat
+#worksItemNo5
+    background-image: url('../img/worksItemNo5.png')
+    background-size: cover
+    background-repeat: no-repeat
+#worksItemNo6
+    background-image: url('../img/worksItemNo6.png')
+    background-size: cover
+    background-repeat: no-repeat
+#worksItemNo7
+    background-image: url('../img/worksItemNo7.png')
+    background-size: cover
+    background-repeat: no-repeat
+#worksItemNo8
+    background-image: url('../img/worksItemNo8.png')
+    background-size: cover
+    background-repeat: no-repeat
+#worksItemNo9
+    background-image: url('../img/worksItemNo9.png')
+    background-size: cover
+    background-repeat: no-repeat
+#worksItemNo10
+    background-image: url('../img/worksItemNo10.png')
+    background-size: cover
+    background-repeat: no-repeat
+#worksItemNo11
+    background-image: url('../img/worksItemNo11.png')
+    background-size: cover
+    background-repeat: no-repeat
+#worksItemNo12
+    background-image: url('../img/worksItemNo12.png')
+    background-size: cover
+    background-repeat: no-repeat
+/* end style works */
+/* style contact */
+.contact
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    padding: 3em 0
+    h1
+        font-family: MyriadProBold
+        font-size: 2em
+        +forPhoneOnly
+            font-size: 1.8em
+        +forTabletPortraitUp
+        +forTabletLandscapeUp
+        text-transform: uppercase
+        color: #4d4d4f
+    .contactDivideLine
+        height: 1px
+        width: 20px
+        border: 1px solid #4d4d4f
+    h3
+        font-family: 'Nanum Gothic'
+        font-size: 1em
+        +forPhoneOnly
+            font-size: .8em
+        +forTabletPortraitUp
+        +forTabletLandscapeUp
+        text-transform: uppercase
+        color: #4d4d4f
+        padding-top: 1em
+    p
+        font-family: 'Gulim'
+        font-size: .9em
+        +forPhoneOnly
+            font-size: .7em
+        +forTabletPortraitUp
+        +forTabletLandscapeUp
+        color: #999999
+        text-align: center
+    h2
+        font-family: 'Nanum Gothic'
+        font-size: 1.5em
+        +forPhoneOnly
+            font-size: 1.3em
+        +forTabletPortraitUp
+        +forTabletLandscapeUp
+        padding: .3em 0
+        text-align: center
+    button
+        height: 2.5em
+        width: 8em
+        border: 2px solid #4d4d4f
+        border-radius: 4px
+        color: #4d4d4f
+        font-weight: bold
+        background-color: #ffffff
+    button:hover
+        color: #ffffff
+        background-color: #4d4d4f
+        cursor: pointer
+/* end style contact */
+/* style footer */
+footer
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    padding: 2em 0
+    .socialLink
+        height: 2em
+        width: 7em
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-content: center
+        a
+            height: 2em
+            width: 2em
+            background-color: #494e57
+            border-radius: 50%
+            color: #ffffff
+            @extend %middleAlignment
+            text-decoration: none
+        a:hover
+            background-color: #696f7a
+    p
+        color: #666666
+        font-family: 'Nanum Gothic'
+        font-size: .8em
+        +forPhoneOnly
+            font-size: .7em
+        +forTabletPortraitUp
+        +forTabletLandscapeUp
+/* end style footer */
+@import res
