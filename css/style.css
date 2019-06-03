@@ -59,10 +59,13 @@ header .menu, main, .link, .works, .contact {
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: MyriadPro, sans-serif;
   background-color: #ffffff;
-  scroll-behavior: smooth;
 }
 
 header {
@@ -156,6 +159,10 @@ header, header .menu ul, header .menu ul li, main .slideWrapper .slideNo1, main 
 }
 
 /* style header */
+header {
+  z-index: 2;
+}
+
 header .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -383,6 +390,7 @@ main .slideWrapper .slideNo1, main .slideWrapper .slideNo2, main .slideWrapper .
 
 main {
   overflow: hidden;
+  position: relative;
 }
 
 main .slideWrapper {
@@ -461,6 +469,28 @@ main .slideWrapper p {
 @media (min-width: 600px) and (max-width: 1199px) {
   main .slideWrapper p {
     font-size: .9em;
+  }
+}
+
+main .bottomPageButton {
+  color: #ffffff;
+  text-align: center;
+  line-height: 2em;
+  position: absolute;
+  bottom: 0;
+  right: 49%;
+  display: none;
+}
+
+@media (max-width: 599px) {
+  main .bottomPageButton {
+    display: block;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  main .bottomPageButton {
+    display: none;
   }
 }
 
@@ -889,6 +919,7 @@ main .slideWrapper p {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 3em 0;
+  position: relative;
 }
 
 .contact h1 {
@@ -989,6 +1020,31 @@ main .slideWrapper p {
   color: #ffffff;
   background-color: #4d4d4f;
   cursor: pointer;
+}
+
+.contact .topPageButton {
+  width: 3em;
+  height: 3em;
+  background-color: #7f7f7f;
+  color: #ffffff;
+  text-align: center;
+  line-height: 3em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+
+@media (max-width: 599px) {
+  .contact .topPageButton {
+    display: block;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  .contact .topPageButton {
+    display: none;
+  }
 }
 
 /* end style contact */

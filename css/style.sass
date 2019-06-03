@@ -5,6 +5,7 @@
     justify-content: center
 /* style header */
 header
+    z-index: 2
     @extend %middleAlignment
     .menu
         display: flex
@@ -123,6 +124,7 @@ header
     flex-direction: column
 main
     overflow: hidden
+    position: relative
     .slideWrapper
         width: 400%
         height: inherit
@@ -169,6 +171,18 @@ main
                 font-size: .8em
             +forTablet
                 font-size: .9em
+    .bottomPageButton
+        color: #ffffff
+        text-align: center
+        line-height: 2em
+        position: absolute
+        bottom: 0
+        right: 49%
+        display: none
+        +forPhoneOnly
+            display: block
+        +forTablet
+            display: none
 @keyframes slide
     20%
         margin-left: 0
@@ -393,6 +407,7 @@ main
     align-items: center
     justify-content: space-around
     padding: 3em 0
+    position: relative
     h1
         font-family: MyriadProBold
         font-size: 2em
@@ -447,6 +462,21 @@ main
         color: #ffffff
         background-color: #4d4d4f
         cursor: pointer
+    .topPageButton
+        width: 3em
+        height: 3em
+        background-color: #7f7f7f
+        color: #ffffff
+        text-align: center
+        line-height: 3em
+        position: absolute
+        bottom: 0
+        right: 0
+        display: none
+        +forPhoneOnly
+            display: block
+        +forTablet
+            display: none
 /* end style contact */
 /* style footer */
 footer
