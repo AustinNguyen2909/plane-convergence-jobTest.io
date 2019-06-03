@@ -46,6 +46,12 @@ header .menu, main, .link, .works, .contact {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1199px) {
+  header .menu, main, .link, .works, .contact {
+    width: 100%;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -75,6 +81,16 @@ header {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1199px) {
+  header {
+    background-color: rgba(0, 0, 0, 0);
+    height: 90px;
+    padding: 0 2em;
+    position: fixed;
+    top: 0;
+  }
+}
+
 main {
   background-color: #000000;
   height: calc(1200px * 0.5);
@@ -91,6 +107,12 @@ main {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1199px) {
+  .link {
+    height: calc(100vw * 0.24);
+  }
+}
+
 .works {
   background-color: #ffffff;
   height: calc(1200px * 0.47);
@@ -99,6 +121,12 @@ main {
 @media (max-width: 599px) {
   .works {
     height: calc(100vw * 1.8);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  .works {
+    height: calc(100vw * 0.65);
   }
 }
 
@@ -152,6 +180,12 @@ header .menu .logoAtBigScreen {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1199px) {
+  header .menu .logoAtBigScreen {
+    display: none;
+  }
+}
+
 header .menu .logoAtBigScreen img {
   height: 90%;
   width: auto;
@@ -173,6 +207,17 @@ header .menu .logoAtSmallScreen {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1199px) {
+  header .menu .logoAtSmallScreen {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 header .menu .logoAtSmallScreen img {
   height: 90%;
   width: auto;
@@ -183,6 +228,12 @@ header .menu ul {
 }
 
 @media (max-width: 599px) {
+  header .menu ul {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
   header .menu ul {
     display: none;
   }
@@ -216,6 +267,17 @@ header .menu .sideNavIcon {
 }
 
 @media (max-width: 599px) {
+  header .menu .sideNavIcon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
   header .menu .sideNavIcon {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -368,6 +430,12 @@ main .slideWrapper h1 {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1199px) {
+  main .slideWrapper h1 {
+    font-size: 53px;
+  }
+}
+
 main .slideWrapper .fontMyriadProBold {
   font-family: MyriadProBold;
 }
@@ -387,6 +455,12 @@ main .slideWrapper p {
 @media (max-width: 599px) {
   main .slideWrapper p {
     font-size: .8em;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  main .slideWrapper p {
+    font-size: .9em;
   }
 }
 
@@ -468,6 +542,12 @@ main .slideWrapper p {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1199px) {
+  .link .linkAbout, .link .linkRecruit, .link .linkBrochure, .link .linkService {
+    height: 100%;
+  }
+}
+
 .link .linkAbout h1, .link .linkRecruit h1, .link .linkBrochure h1, .link .linkService h1 {
   font-family: MyriadProBold;
   font-size: 1.8em;
@@ -481,6 +561,12 @@ main .slideWrapper p {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1199px) {
+  .link .linkAbout h1, .link .linkRecruit h1, .link .linkBrochure h1, .link .linkService h1 {
+    font-size: 1.2em;
+  }
+}
+
 .link .linkRecruit h3, .link .linkService h3 {
   font-family: 'Segoe UI Regular';
   font-size: .8em;
@@ -491,6 +577,12 @@ main .slideWrapper p {
 @media (max-width: 599px) {
   .link .linkRecruit h3, .link .linkService h3 {
     font-size: .7em;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  .link .linkRecruit h3, .link .linkService h3 {
+    font-size: .6em;
   }
 }
 
@@ -578,6 +670,12 @@ main .slideWrapper p {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1199px) {
+  .works .worksTitle {
+    height: 30%;
+  }
+}
+
 .works .worksTitle h1 {
   font-family: MyriadProBold;
   font-size: 2em;
@@ -612,6 +710,12 @@ main .slideWrapper p {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1199px) {
+  .works .worksTitle h3 {
+    font-size: .9em;
+  }
+}
+
 .works .worksList {
   height: 70%;
   display: -webkit-box;
@@ -631,6 +735,12 @@ main .slideWrapper p {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1199px) {
+  .works .worksList {
+    height: 70%;
+  }
+}
+
 .works .worksList .worksItem {
   width: 16.66667%;
   height: 50%;
@@ -640,6 +750,13 @@ main .slideWrapper p {
   .works .worksList .worksItem {
     width: 50%;
     height: 33.33333%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  .works .worksList .worksItem {
+    width: 25%;
+    height: 50%;
   }
 }
 
@@ -674,6 +791,12 @@ main .slideWrapper p {
 
 @media (max-width: 599px) {
   .works .worksList .disappearAtSmallScreen {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  .works .worksList .disappearAtMediumScreen {
     display: none;
   }
 }
@@ -781,6 +904,12 @@ main .slideWrapper p {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1199px) {
+  .contact h1 {
+    font-size: 1.9em;
+  }
+}
+
 .contact .contactDivideLine {
   height: 1px;
   width: 20px;
@@ -793,11 +922,18 @@ main .slideWrapper p {
   text-transform: uppercase;
   color: #4d4d4f;
   padding-top: 1em;
+  text-align: center;
 }
 
 @media (max-width: 599px) {
   .contact h3 {
     font-size: .8em;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  .contact h3 {
+    font-size: .9em;
   }
 }
 
@@ -814,6 +950,12 @@ main .slideWrapper p {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1199px) {
+  .contact p {
+    font-size: .8em;
+  }
+}
+
 .contact h2 {
   font-family: 'Nanum Gothic';
   font-size: 1.5em;
@@ -824,6 +966,12 @@ main .slideWrapper p {
 @media (max-width: 599px) {
   .contact h2 {
     font-size: 1.3em;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  .contact h2 {
+    font-size: 1.4em;
   }
 }
 

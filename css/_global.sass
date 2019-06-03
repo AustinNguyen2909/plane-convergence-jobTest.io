@@ -31,8 +31,8 @@
     margin: 0 auto
     +forPhoneOnly
         width: 100% //change at phone size
-    +forTabletPortraitUp
-    +forTabletLandscapeUp
+    +forTablet
+        width: 100%
 *
     margin: 0
     padding: 0
@@ -51,8 +51,12 @@ header
         padding: 0 2em
         position: fixed
         top: 0
-    +forTabletPortraitUp
-    +forTabletLandscapeUp
+    +forTablet
+        background-color: rgba(0, 0, 0, 0) //change at tablet size
+        height: 90px
+        padding: 0 2em
+        position: fixed
+        top: 0
     .menu
         @extend %container
 main
@@ -65,16 +69,16 @@ main
     height: calc(1200px * 0.24)
     +forPhoneOnly
         height: calc(100vw * 0.96)
-    +forTabletPortraitUp
-    +forTabletLandscapeUp
+    +forTablet
+        height: calc(100vw * 0.24)
 .works
     background-color: #ffffff
     @extend %container
     height: calc(1200px * 0.47)
     +forPhoneOnly
         height: calc(100vw * 1.8)
-    +forTabletPortraitUp
-    +forTabletLandscapeUp
+    +forTablet
+        height: calc(100vw * 0.65)
 .contact
     background-color: #ffffff
     @extend %container

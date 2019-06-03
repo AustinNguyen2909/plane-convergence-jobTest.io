@@ -14,8 +14,8 @@ header
             align-items: center
             +forPhoneOnly
                 display: none
-            +forTabletPortraitUp
-            +forTabletLandscapeUp
+            +forTablet
+                display: none
             img
                 height: 90%
                 width: auto
@@ -25,8 +25,9 @@ header
             +forPhoneOnly
                 display: flex
                 align-items: center
-            +forTabletPortraitUp
-            +forTabletLandscapeUp
+            +forTablet
+                display: flex
+                align-items: center
             img
                 height: 90%
                 width: auto
@@ -35,8 +36,8 @@ header
             list-style-type: none
             +forPhoneOnly
                 display: none
-            +forTabletPortraitUp
-            +forTabletLandscapeUp
+            +forTablet
+                display: none
             li
                 @extend %middleAlignment
                 width: 8em
@@ -56,8 +57,9 @@ header
             +forPhoneOnly
                 display: flex
                 align-items: center
-            +forTabletPortraitUp
-            +forTabletLandscapeUp
+            +forTablet
+                display: flex
+                align-items: center
         .sidenav
             height: 100%
             width: 0
@@ -151,8 +153,8 @@ main
             text-align: center
             +forPhoneOnly
                 font-size: 45px
-            +forTabletPortraitUp
-            +forTabletLandscapeUp
+            +forTablet
+                font-size: 53px
         .fontMyriadProBold
             font-family: MyriadProBold
         .fontMyriadProLight
@@ -165,8 +167,8 @@ main
             padding-top: 1em
             +forPhoneOnly
                 font-size: .8em
-            +forTabletPortraitUp
-            +forTabletLandscapeUp
+            +forTablet
+                font-size: .9em
 @keyframes slide
     20%
         margin-left: 0
@@ -197,15 +199,15 @@ main
     +forPhoneOnly
         width: 50%
         height: 50%
-    +forTabletPortraitUp
-    +forTabletLandscapeUp
+    +forTablet
+        height: 100%
 %linkItemHeading
     font-family: MyriadProBold
     font-size: 1.8em
     +forPhoneOnly
         font-size: 1.5em
-    +forTabletPortraitUp
-    +forTabletLandscapeUp
+    +forTablet
+        font-size: 1.2em
     color: #3d3d3d
     text-transform: uppercase
 %linkItemSubHeading
@@ -213,8 +215,8 @@ main
     font-size: .8em
     +forPhoneOnly
         font-size: .7em
-    +forTabletPortraitUp
-    +forTabletLandscapeUp
+    +forTablet
+        font-size: .6em
     color: #3d3d3d
     text-transform: uppercase
 .link
@@ -265,15 +267,14 @@ main
         height: 30%
         +forPhoneOnly
             height: 20%
-        +forTabletPortraitUp
-        +forTabletLandscapeUp
+        +forTablet
+            height: 30%
         h1
             font-family: MyriadProBold
             font-size: 2em
             +forPhoneOnly
                 font-size: 1.8em
-            +forTabletPortraitUp
-            +forTabletLandscapeUp
+            +forTablet
             text-transform: uppercase
             color: #4d4d4f
             padding-bottom: .3em
@@ -286,8 +287,8 @@ main
             font-size: 1em
             +forPhoneOnly
                 font-size: .8em
-            +forTabletPortraitUp
-            +forTabletLandscapeUp
+            +forTablet
+                font-size: .9em
             text-transform: uppercase
             color: #4d4d4f
             padding-top: 1em
@@ -298,8 +299,8 @@ main
         flex-direction: row
         +forPhoneOnly
             height: 80%
-        +forTabletPortraitUp
-        +forTabletLandscapeUp
+        +forTablet
+            height: 70%
         .worksItem
             @extend %middleAlignment
             width: 1 / 6 * 100%
@@ -307,8 +308,9 @@ main
             +forPhoneOnly
                 width: 50%
                 height: 1 / 3 * 100%
-            +forTabletPortraitUp
-            +forTabletLandscapeUp
+            +forTablet
+                width: 25%
+                height: 50%
             a
                 @extend %middleAlignment
                 height: 80%
@@ -332,8 +334,9 @@ main
         .disappearAtSmallScreen
             +forPhoneOnly
                 display: none
-            +forTabletPortraitUp
-            +forTabletLandscapeUp
+        .disappearAtMediumScreen
+            +forTablet
+                display: none
 #worksItemNo1
     background-image: url('../img/worksItemNo1.png')
     background-size: cover
@@ -395,8 +398,8 @@ main
         font-size: 2em
         +forPhoneOnly
             font-size: 1.8em
-        +forTabletPortraitUp
-        +forTabletLandscapeUp
+        +forTablet
+            font-size: 1.9em
         text-transform: uppercase
         color: #4d4d4f
     .contactDivideLine
@@ -408,18 +411,19 @@ main
         font-size: 1em
         +forPhoneOnly
             font-size: .8em
-        +forTabletPortraitUp
-        +forTabletLandscapeUp
+        +forTablet
+            font-size: .9em
         text-transform: uppercase
         color: #4d4d4f
         padding-top: 1em
+        text-align: center
     p
         font-family: 'Gulim'
         font-size: .9em
         +forPhoneOnly
             font-size: .7em
-        +forTabletPortraitUp
-        +forTabletLandscapeUp
+        +forTablet
+            font-size: .8em
         color: #999999
         text-align: center
     h2
@@ -427,8 +431,8 @@ main
         font-size: 1.5em
         +forPhoneOnly
             font-size: 1.3em
-        +forTabletPortraitUp
-        +forTabletLandscapeUp
+        +forTablet
+            font-size: 1.4em
         padding: .3em 0
         text-align: center
     button
@@ -474,7 +478,6 @@ footer
         font-size: .8em
         +forPhoneOnly
             font-size: .7em
-        +forTabletPortraitUp
-        +forTabletLandscapeUp
+        +forTablet
 /* end style footer */
 @import res

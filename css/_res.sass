@@ -1,8 +1,6 @@
 =forPhoneOnly
     @media (max-width: 599px)  { @content; }
-=forTabletPortraitUp
-    @media (min-width: 600px)  { @content; }
-=forTabletLandscapeUp
-    @media (min-width: 900px)  { @content; }
+=forTablet
+    @media (min-width: 600px) and (max-width: 1199px) { @content; }
 =forPC
     @media (min-width: 1200px) { @content; }
